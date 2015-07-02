@@ -1,7 +1,11 @@
 var fileSys   = require('fs');
-var args 	  = process.argv;
+var args      = process.argv;
 var filePath  = args[2];
 
+// Takes a command-line argument as a file path
+// Displays error if argument was not passed,
+// Opens file, counts new lines, returns total
+// Asynchronous Method uses call-back function
 if(!filePath) {
 	console.log("You forgot to enter a file name");
 }
