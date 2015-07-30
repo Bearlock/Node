@@ -11,7 +11,7 @@ Program10.js is a learnyounode exercise that I thought was pretty nifty.
 Its a raw TCP server that takes an arbitrary port as its first argument.
 it can be called like so:
 
-node program10.js **\<port\>**
+**node program10.js \<port\>**
 
 Afterwards, if one were to telnet to that specified port, it would return
 the current date-time in a nice, easy to read format. The server stays 
