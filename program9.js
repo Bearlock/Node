@@ -1,7 +1,7 @@
-var http  	  = require('http');
-var urls  	  = process.argv.slice(2);
+var http      = require('http');
+var urls      = process.argv.slice(2);
 var textArray = [];
-var count 	  = 0;
+var count     = 0;
 
 // Function to print items in text array to stdout
 function print() {
@@ -16,7 +16,7 @@ function print() {
 // Increments callback count and checks to see if all urls are done
 // Finishes up by callling print() function to print stored strings
 function getText(index) {
-	var text ='';
+	var text = '';
 	
 	http.get(urls[index], function callback(response) {
 		response.setEncoding("utf8");
