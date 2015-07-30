@@ -5,9 +5,9 @@ var count     = 0;
 
 // Function to print items in text array to stdout
 function print() {
-	for(var i = 0; i < urls.length; i++) {
-		console.log(textArray[i]);
-	}
+    for(var i = 0; i < urls.length; i++) {
+        console.log(textArray[i]);
+    }
 }
 
 // Executes http GET on sites. Takes sites' response as callback.
@@ -16,24 +16,24 @@ function print() {
 // Increments callback count and checks to see if all urls are done
 // Finishes up by callling print() function to print stored strings
 function getText(index) {
-	var text = '';
+    var text = '';
 	
-	http.get(urls[index], function callback(response) {
-		response.setEncoding("utf8");
-		response.on("data", function(data) {
-			text += data;
-		});
-		response.on('error', console.error );
-		response.on('end', function() {
+    http.get(urls[index], function callback(response) {
+        response.setEncoding("utf8");
+        response.on("data", function(data) {
+            text += data;
+        });
+        response.on('error', console.error );
+        response.on('end', function() {
 			
-			textArray[index] = text;
-			count++
+            textArray[index] = text;
+            count++
 			
-			if (count == urls.length) {
-				print()
-			}
-		});
-	});
+            if (count == urls.length) {
+                print()
+            }
+        });
+    });
 }
 
 for (var i = 0; i < urls.length; i++) {

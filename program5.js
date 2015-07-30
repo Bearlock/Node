@@ -10,15 +10,15 @@ var exts      = args[3];
 // type, and returns files only of that type. 
 // Displays output line by line, if it exists.  
 if (!filePath) {
-	console.log("You forgot to enter a file name");
+    console.log("You forgot to enter a file name");
 }
 
 else {
-	fileSys.readdir(filePath, function callback(err, fileList) {
-		for (list in fileList) {
-			if (path.extname(fileList[list]) == "." + exts) {
-				console.log(fileList[list]);
-			}
-		}
-	});
+    fileSys.readdir(filePath, function callback(err, fileList) {
+        for (list in fileList) {
+            if (path.extname(fileList[list]) == "." + exts) {
+                console.log(fileList[list]);
+            }
+        }
+    });
 }

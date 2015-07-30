@@ -6,14 +6,14 @@ var text = '';
 // Encodes response to utf8 and concatenates it all to text var.
 // Prints out length of string and then prints out datastring. 
 http.get(site, function callback(response) {
-	response.setEncoding("utf8");
-	response.on("data", function(data) {
-		text += data;
-	});
-	response.on('error', console.error );
-	response.on('end', function() {
-		console.log(text.length);
-		console.log(text);
-	});
+    response.setEncoding("utf8");
+    response.on("data", function(data) {
+        text += data;
+    });
+    response.on('error', console.error );
+    response.on('end', function() {
+        console.log(text.length);
+        console.log(text);
+    });
 });
 
