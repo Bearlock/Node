@@ -24,7 +24,7 @@ I mean what else could it be?
 
 Program2.js is a program that exposed me to the concepts of arguments in Node.
 The way the program works is that it takes any integer values in the arguments array
-and adds them all together and returns the value to stdout.
+and adds them all together, returning the value to stdout.
 
 Here is an example of how it would work:
 
@@ -35,10 +35,28 @@ The program would take those 5 arguments and return 15 to stdout.
 ###<a id='program3'></a>
 ##Program3.js
 
+Program3.js is a program that takes a full filepath as its argument. With that argument it
+finds the file in the filesystem, opens it, and counts the number of newlines contained within.
+It then returns this number to stdout. 
+
+It works like so:
+
+$ node program3.js /var/www/myfile.txt
+
+It then reads the file and returns however many newlines it has.
 
 ###<a id='program4'></a>
 ##Program4.js
 
+Program4.js is very similar to Program3.js in the sense that it does the same exact thing. It 
+takes a full filepath as its only argument, opens the file, reads the contents, and returns the
+number of newlines. Program4.js is different in that it does all of this asynchronously. 
+
+Call it like this:
+
+$ node program4.js /var/www/myfile.txt
+
+It will then return the number of lines to stdout.
 
 ###<a id='program5'></a>
 ##Program5.js
