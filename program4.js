@@ -7,12 +7,12 @@ var filePath  = args[2];
 // Opens file, counts new lines, returns total
 // Asynchronous Method uses call-back function
 if(!filePath) {
-	console.log("You forgot to enter a file name");
+    console.log("You forgot to enter a file name");
 }
 
 else {
-	fileSys.readFile(filePath, 'utf8', function(err, data) {
-		 var lineCount = data.split('\n').length - 1;
-		 console.log(lineCount);
-	});
+    fileSys.readFile(filePath, 'utf8', function(err, data) {
+        var lineCount = data.split('\n').length - 1;
+        console.log(lineCount);
+    });
 }
