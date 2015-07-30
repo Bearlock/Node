@@ -37,5 +37,5 @@ function getText(index) {
 }
 
 for (var i = 0; i < urls.length; i++) {
-	getText(i);
+    getText(i);
 }
