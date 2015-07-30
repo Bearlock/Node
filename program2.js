@@ -1,13 +1,11 @@
-array = process.argv;
-var arrayLength = array.length;
-var val = 0;
+var args = process.argv.slice(2);
+var val  = 0;
 
-// Takes command-line arguments as an array,
-// tries to cast them to ints and finally
-// returns the total value of the array
-for (var i = 2; i < arrayLength; i++)
+// Takes command-line arguments and casts them to ints.
+// Sums up each argument and prints result to stdout.
+for (var i = 0; i < args.length; i++)
 {
-    val += Number(array[i]);
+    val += Number(args[i]);
 }
 
 console.log(val);
