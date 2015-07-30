@@ -24,6 +24,12 @@ Links to program synopses:
 Program1.js is a program that writes 'Hello World' to stdout.  
 I mean what else could it be?
 
+Get your hello world on:
+
+```
+$ node program1.js
+```
+
 ###<a id='program2'></a>
 ##Program2.js
 
@@ -33,7 +39,9 @@ and adds them all together, returning the value to stdout.
 
 Here is an example of how it would work:
 
+```
 $ node program2.js 1 2 3 4 5
+```
 
 The program would take those 5 arguments and return 15 to stdout.
 
@@ -46,7 +54,9 @@ It then returns this number to stdout.
 
 It works like so:
 
+```
 $ node program3.js /var/www/myfile.txt
+```
 
 It then reads the file and returns however many newlines it has.
 
@@ -59,7 +69,9 @@ number of newlines. Program4.js is different in that it does all of this asynchr
 
 Call it like this:
 
+```
 $ node program4.js /var/www/myfile.txt
+```
 
 It will then return the number of lines to stdout.
 
@@ -72,7 +84,9 @@ file names with the specified file extension, and then return a list of those fi
 
 It works thusly:
 
+```
 $ node program5.js /var/www/JavaScript/ js
+```
 
 The program will then return all files that have a '.js' file extension to stdout. 
 
@@ -84,7 +98,9 @@ exact same thing. Except this time, its Asynchronous. This takes a directory and
 
 It works like this:
 
+```
 $ node program6.js /var/www/JavaScript/ js
+```
 
 It will then return a list of all files ending with a '.js' file extension and print it to stdout.
 
@@ -129,7 +145,9 @@ port as its first argument.
 
 it can be called like so:
 
+```
 $ node program10.js \<port\>
+```
 
 Afterwards, if one were to telnet to that specified port, it would return
 the current date-time in a nice, easy to read format. The server stays
