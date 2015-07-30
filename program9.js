@@ -14,7 +14,7 @@ function print() {
 // Encodes responses to utf8 and concatenates it all to text var.
 // Stores responses into an array of strings according accessed index.
 // Increments callback count and checks to see if all urls are done
-// Finishes up by callling print() function to print stored strings
+// Finishes up by calling print() function to print stored strings
 function getText(index) {
     var text = '';
 	
