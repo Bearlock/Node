@@ -97,7 +97,9 @@ and prints it to stdout as it gets it.
 
 Call it like so:
 
+```
 $ node program7.js http://google.com
+```
 
 This case in particular returns the following to stdout:
 
