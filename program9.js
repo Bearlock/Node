@@ -12,7 +12,7 @@ function print() {
 
 // Executes http GET on sites. Takes sites' response as callback.
 // Encodes responses to utf8 and concatenates it all to text var.
-// Stores responses into an array of strings according accessed index.
+// Stores responses in a string array according to index accessed.
 // Increments callback count and checks to see if all urls are done
 // Finishes up by calling print() function to print stored strings
 function getText(index) {
@@ -27,10 +27,10 @@ function getText(index) {
         response.on('end', function() {
 			
             textArray[index] = text;
-            count++
+            count++;
 			
             if (count == urls.length) {
-                print()
+                print();
             }
         });
     });
