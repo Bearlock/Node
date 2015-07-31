@@ -214,7 +214,7 @@ drwxrwxr-x. 8 erick erick 4096 Jul 30 16:54 .git
 -rw-rw-r--. 1 erick erick 4120 Jul 31 08:26 README.md
 ```
 
-Program6.js grabs just the '.js files.
+Program6.js grabs just the '.js' files.
 
 Output:
 
