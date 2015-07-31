@@ -463,12 +463,12 @@ The current time is: 2015-07-31 08:37
 Connection closed by foreign host.
 ```
 
-###<a id='program10'></a>
+###<a id='program11'></a>
 ##Program11.js
 
 Program11.js is a light (and stupid) HTTP server; stupid in the sense that it only serves up one
 file. It takes a port and a filepath as its arguments. It listens to requests on the port specified
-and serves up the file specified in the argument. 
+and serves up the file specified. 
 
 You can call it like so:
 
@@ -476,7 +476,7 @@ You can call it like so:
 $ node program11.js 8000 /var/www/test.html
 ```
 
-The interesting thing about how that file renders, is how the headers are written. Initially the code
+The interesting thing about how that file renders is how the headers are written. Initially the code
 looked like this:
 
 ```javascript
@@ -484,7 +484,7 @@ res.writeHead(200, { 'content-type': 'text/plain' })
 ```
 
 As **should** have been expected, when I visited my domain and that port from a browser, it was returning 
-my html to me in plaintext.
+my HTML to me in plaintext.
 
 Output:
 
@@ -496,14 +496,14 @@ Output:
 </html>
 ```
 
-But I didn't want plaintext. I wanted fully rendered html. I tweaked the headers ever so slightly:
+But I didn't want plaintext. I wanted fully rendered HTML. I tweaked the headers ever so slightly:
 
 ```javascript
 res.writeHead(200, { 'content-type': 'text/html' })
 ```
 
-And that fully rendered the html to look how I wanted.
+And that fully rendered the HTML to look how I wanted.
 
 Output:
 
-<h1>Welcome! this is a test of my HTTP server!</h1>
+<h1>Welcome! This is a test of my HTTP server!</h1>
