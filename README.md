@@ -503,7 +503,3 @@ res.writeHead(200, { 'content-type': 'text/html' })
 ```
 
 And that fully rendered the HTML to look how I wanted.
-
-Output:
-
-<h1>Welcome! This is a test of my HTTP server!</h1>
