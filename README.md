@@ -6,48 +6,46 @@ Like it says above, this is a place for me to play around with Node.js.
 
 Links to program synopses:
 
-[program1.js](#program1)
+[program1.js](#program1.js)
 
-[program2.js](#program2)
+[program2.js](#program2.js)
 
-[program3.js](#program3)
+[program3.js](#program3.js)
 
-[program4.js](#program4)
+[program4.js](#program4.js)
 
-[program5.js](#program5)
+[program5.js](#program5.js)
 
-[program6.js](#program6)
+[program6.js](#program6.js)
 
-[program7.js](#program7)
+[program7.js](#program7.js)
 
-[program8.js](#program8)
+[program8.js](#program8.js)
 
-[program9.js](#program9)
+[program9.js](#program9.js)
 
-[program10.js](#program10)
+[program10.js](#program10.js)
 
-[program11.js](#program11)
+[program11.js](#program11.js)
 
-###<a id='program1'></a>
-##Program1.js
+## Program1.js
 
 Program1.js is a program that writes 'Hello World' to stdout.  
 I mean what else could it be?
 
 Get your hello world on:
 
-```
+```sh
 $ node program1.js
 ```
 
 Output:
 
-```
+```sh
 HELLO WORLD
 ```
 
-###<a id='program2'></a>
-##Program2.js
+## Program2.js
 
 Program2.js is a program that exposed me to the concepts of arguments in Node.
 The way the program works is that it takes any integer values in the arguments array
@@ -55,7 +53,7 @@ and adds them all together, returning the value to stdout.
 
 Here is an example of how it would work:
 
-```
+```sh
 $ node program2.js 1 2 3 4 5
 ```
 
@@ -63,12 +61,11 @@ The program would take those 5 and add 'em up.
 
 Output:
 
-```
+```sh
 15
 ```
 
-###<a id='program3'></a>
-##Program3.js
+## Program3.js
 
 Program3.js is a program that takes a full filepath as its argument. With that argument it
 finds the file in the filesystem, opens it, and counts the number of newlines contained within.
@@ -76,13 +73,13 @@ It then returns this number to stdout.
 
 It works like so:
 
-```
+```sh
 $ node program3.js /var/www/file.txt
 ```
 
 In my case file.txt looks like this:
 
-```
+```sh
 $ cat file.txt
 Hey
 This
@@ -92,13 +89,12 @@ A file
 
 Output:
 
-```
+```sh
 $ node program3.js /var/www/file.txt
 4
 ```
 
-###<a id='program4'></a>
-##Program4.js
+## Program4.js
 
 Program4.js is very similar to Program3.js in the sense that it does the same exact thing. It 
 takes a full filepath as its only argument, opens the file, reads the contents, and returns the
@@ -106,13 +102,13 @@ number of newlines. Program4.js is different in that it does all of this asynchr
 
 Call it like this:
 
-```
+```sh
 $ node program4.js /var/www/myfile.txt
 ```
 
 It will then return the number of lines to stdout. In my case file.txt looks like this:
 
-```
+```sh
 $ cat file.txt
 Hey
 This
@@ -122,13 +118,12 @@ A file
 
 Output:
 
-```
+```sh
 $ node program4.js /var/www/myfile.txt
 4
 ```
 
-###<a id='program5'></a>
-##Program5.js
+## Program5.js
 
 Program5.js is a program that finds files in a given directory by file extension. It takes a directory
 and a file extension as its arguments. The program will open the specified directory, gather up the 
@@ -136,15 +131,15 @@ file names with the specified file extension, and then return a list of those fi
 
 It works thusly:
 
-```
+```sh
 $ node program5.js /var/www/JavaScript/ js
 ```
 
 The program will then return all files that have a '.js' file extension to stdout. My node_projects directory
 has a few files in it. Looks like this:
 
-```
-$ls -la
+```sh
+$ ls -la
 total 64
 drwxrwxr-x. 3 erick erick 4096 Jul 30 14:34 .
 drwxr-xr-x. 9 erick erick 4096 Jul 17 09:37 ..
@@ -167,7 +162,7 @@ Program5.js grabs just the '.js files.
 
 Output:
 
-```
+```sh
 $ node program5.js /var/www/node_projects/ js
 program1.js
 program10.js
@@ -181,23 +176,22 @@ program8.js
 program9.js
 ```
 
-###<a id='program6'></a>
-##Program6.js
+## Program6.js
 
 Program6.js is a program that is very similar to Program5.js. Again, this is in the sense that it does the
 exact same thing. Except this time its asynchronous. This takes a directory and a file extension as arguments
 
 It works like this:
 
-```
+```sh
 $ node program6.js /var/www/JavaScript/ js
 ```
 
 It will then return a list of all files ending with a '.js' file extension and print it to stdout. My node_projects 
 directory has a few files in it. Looks like this:
 
-```
-$ls -la
+```sh
+$ ls -la
 total 64
 drwxrwxr-x. 3 erick erick 4096 Jul 30 14:34 .
 drwxr-xr-x. 9 erick erick 4096 Jul 17 09:37 ..
@@ -220,7 +214,7 @@ Program6.js grabs just the '.js' files.
 
 Output:
 
-```
+```sh
 $ node program6.js /var/www/node_projects/ js
 program1.js
 program10.js
@@ -234,9 +228,7 @@ program8.js
 program9.js
 ```
 
-
-###<a id='program7'></a>
-##Program7.js
+## Program7.js
 
 Program7.js is an interesting program. Maybe it could be considered a **very** low-powered curl (emphasis on very).
 The program works by taking a URL as its argument. It executes an HTTP GET on the URL and reads the data line by line
@@ -244,7 +236,7 @@ and prints it to stdout as it gets it.
 
 Call it like so:
 
-```
+```sh
 $ node program7.js http://google.com
 ```
 
@@ -259,8 +251,7 @@ The document has moved
 </BODY></HTML>
 ```
 
-###<a id='program8'></a>
-##Program8.js
+## Program8.js
 
 Program8.js is similar to program7.js. It executes the same HTTP GET comman on a URL and read the data line by line.
 This time however, the program concatenates all the data into a single string and outputs the data contents after 
@@ -268,7 +259,7 @@ it reaches the end of the file. It also counts the number of characters in the s
 
 Run it like so:
 
-```
+```sh
 $ node program8.js http://google.com
 ```
 
@@ -284,8 +275,7 @@ The document has moved
 </BODY></HTML>
 ```
 
-###<a id='program9'></a>
-##Program9.js
+## Program9.js
 
 Program9.js is a program that is similar in nature to the last two. However, this time it can take
 multiple URLs as its arguments. It executes HTTP GET requests on those URLs, concatenates the received
@@ -295,7 +285,7 @@ that the arguments were called.
 
 Call it as follows:
 
-```
+```sh
 $ node program9.js http://yahoo.com http://google.com http://threevirtues.com
 ```
 
@@ -432,8 +422,7 @@ function setfooter() {
 </HTML>
 ```
 
-###<a id='program10'></a>
-##Program10.js
+## Program10.js
 
 Program10.js is a program that I thought was pretty nifty.
 Its a raw TCP server(my first one!) that takes an arbitrary 
@@ -441,7 +430,7 @@ port as its first argument.
 
 It can be called like so:
 
-```
+```sh
 $ node program10.js 8000
 ```
 
@@ -452,7 +441,7 @@ the the connection after returning the date-time.
 
 Output:
 
-```
+```sh
 $ telnet 127.0.0.1 58017
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
@@ -463,8 +452,7 @@ The current time is: 2015-07-31 08:37
 Connection closed by foreign host.
 ```
 
-###<a id='program11'></a>
-##Program11.js
+## Program11.js
 
 Program11.js is a light (and stupid) HTTP server; stupid in the sense that it only serves up one
 file. It takes a port and a filepath as its arguments. It listens to requests on the port specified
@@ -472,7 +460,7 @@ and serves up the file specified.
 
 You can call it like so:
 
-```
+```sh
 $ node program11.js 8000 /var/www/test.html
 ```
 
